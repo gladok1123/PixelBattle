@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Pixel Battle · Liquid Glass</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="glass-container">
+    <h1>Pixel Battle</h1>
+    <div class="subtitle">холст 2048×2048 · рисуй вместе</div>
+
+    <div class="canvas-wrapper" id="canvasWrapper">
+      <canvas id="pixelCanvas" width="2048" height="2048"></canvas>
+    </div>
+
+    <div class="toolbar">
+      <div class="color-pick-wrapper">
+        <div class="color-indicator" id="colorPreview"></div>
+        <input type="color" id="colorPicker" class="color-picker-hidden" value="#FF3B30">
+      </div>
+      <div class="coords" id="coordDisplay">X: - Y: -</div>
+      <div class="status-badge">
+        <span class="online-dot"></span>
+        <span id="playerCount">1</span>
+      </div>
+    </div>
+
+    <div class="zoom-controls">
+      <button class="btn zoom-btn" id="zoomIn">🔍+</button>
+      <button class="btn zoom-btn" id="zoomOut">🔍-</button>
+      <button class="btn zoom-btn" id="zoomReset">↺</button>
+    </div>
+
+    <div class="hint-text">касайся холста для рисования · масштабируй жестами</div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
